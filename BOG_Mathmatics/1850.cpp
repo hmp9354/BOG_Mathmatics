@@ -1,3 +1,4 @@
+// 해결하지 않음. 백준에 돌리면 시간초과
 #include <iostream>
 #include <math.h>
 

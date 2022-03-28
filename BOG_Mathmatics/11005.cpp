@@ -10,23 +10,25 @@ int main() {
 	int q;
 	char r;
 	q = N / B;
-	r = (char)(N % B) + 48;
-
-	int tmp = 0;
-	if (r >= 10) {
-		tmp = (int)(r - 48) - 10;
-		r = 'A' + tmp;
-	}
-	stack<char> result;
+	r = N % B;	
+	
+	stack<int> result;
 	while (q) {
 		result.push(r);
 		N = q;
 		q = N / B;
-		r = (char)(N % B) + 48;
+		r = N % B;
 	}
-
+	result.push(r);
+	
 	while (result.size()) {
-		cout << result.top();
+		if (result.top() >= 10 && B > 10) {
+			char tmp = 'A' + (result.top() - 10);
+			cout << tmp;
+		}
+		else {
+			cout << result.top();
+		}
 		result.pop();
 	}
 }

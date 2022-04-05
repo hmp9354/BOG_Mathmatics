@@ -1,5 +1,6 @@
 #include <iostream>
 #include <math.h>
+using namespace std;
 
 void PN(int num, char list[]) {	
 
@@ -17,7 +18,7 @@ int main() {
 	int num;
 	char list[1000002] = { 0 };
 	int a, b;
-	PN(1000002, list);
+	PN(1000001, list);
 
 	while (1) {
 		scanf_s("%d", &num);
